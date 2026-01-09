@@ -1,0 +1,27 @@
+
+# Build outputs
+dist/
+target/
+**/dist/
+**/target/
+
+# IDE files
+.idea/
+.vscode/
+*.iml
+
+# Log files
+*.log
+
+# Environment files
+.env
+.env.local
+.DS_Store
+._.DS_Store
+._*
+**/.DS_Store
+**/._*
+
+# Node modules
+node_modules/
+**/node_modules/
