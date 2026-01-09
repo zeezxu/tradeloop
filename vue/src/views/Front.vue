@@ -114,11 +114,56 @@ export default {
     font-size: 16px;
     padding: 0 20px;
     cursor: pointer;
+    white-space: nowrap;
+    flex-shrink: 0;
   }
   .menu:hover {
     color: orange;
   }
   .menu-active {
     color: orange;
+  }
+</style>
+<style scoped>
+  @import "@/assets/css/front.css";
+
+  .menu {
+    color: #eee;
+    font-size: 16px;
+    padding: 0 20px;
+    cursor: pointer;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  
+  .menu:hover {
+    color: orange;
+  }
+  
+  .menu-active {
+    color: orange;
+  }
+
+  /* Ensure header doesn't break on smaller screens */
+  .front-header-center {
+    display: flex;
+    gap: 5px;
+    flex-wrap: nowrap;
+  }
+
+  /* Make menu items slightly smaller on medium screens */
+  @media (max-width: 1200px) {
+    .menu {
+      padding: 0 15px;
+      font-size: 15px;
+    }
+  }
+
+  /* Even smaller on tablet */
+  @media (max-width: 992px) {
+    .menu {
+      padding: 0 12px;
+      font-size: 14px;
+    }
   }
 </style>

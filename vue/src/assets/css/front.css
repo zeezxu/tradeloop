@@ -5,6 +5,159 @@
     color: #666;
     font-size: 12px
 }
+
+.front-header {
+    display: flex;
+    height: 60px;
+    line-height: 60px;
+    background: #033fbb;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.front-header-left {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    min-width: fit-content;
+}
+
+.front-header-left img, .front-header-dropdown img {
+    width: 40px;
+    height: 40px;
+    /*border-radius: 50%*/
+}
+
+.front-header-left .title {
+    color: #fff;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.front-header-center {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    min-width: 0;
+    overflow-x: auto;
+}
+
+.front-header-right {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    min-width: fit-content;
+    padding-left: 20px;
+    line-height:normal;
+    height: 60px;
+}
+
+.front-header-dropdown {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    line-height: normal;
+}
+
+.el-dropdown-menu {
+    width: 110px !important;
+    text-align: center !important;
+}
+
+.main-content {
+    width: 100%;
+}
+
+.main-body {
+    min-height: calc(100vh - 150px);
+}
+
+.el-menu.el-menu--horizontal {
+    border: none !important;
+    height: 59px;
+}
+
+.wrap-header-table .el-table__header th .cell {
+    white-space: normal !important;
+    line-height: 1.4;
+    word-break: normal !important;
+    overflow-wrap: break-word;
+    padding: 5px 0;
+    text-align: center !important;
+}
+
+.wrap-header-table .el-table__header th {
+    height: auto !important;
+    min-height: 50px;
+}
+
+.wrap-header-table .el-table__body td .cell {
+    text-align: center !important;
+}
+
+.el-input__inner,
+.el-textarea__inner,
+.el-select .el-input__inner {
+    font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+    font-size: 14px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .front-header {
+    padding: 0 15px;
+  }
+  
+  .front-header-left .title {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 992px) {
+  .front-header-left .title {
+    font-size: 16px;
+  }
+  
+  .front-header-left img {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 768px) {
+  .front-header {
+    padding: 0 10px;
+  }
+  
+  .front-header-left {
+    padding-left: 0;
+  }
+  
+  .front-header-right {
+    padding-left: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .front-header-left .title {
+    display: none;
+  }
+}.front-notice {
+    height: 30px;
+    line-height: 30px;
+    padding: 0 20px;
+    color: #666;
+    font-size: 12px
+}
 .front-header {
     display: flex;
     height: 60px;
