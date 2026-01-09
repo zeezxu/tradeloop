@@ -1,0 +1,44 @@
+server:
+  port: 9090
+
+# Database Configuration
+spring:
+  profiles:
+    active: local
+  application:
+    name: springboot
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:your_password_here}
+    url: jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}/tradeloop?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false&serverTimezone=GMT%2b8&allowPublicKeyRetrieval=true
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+
+# MyBatis Configuration
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.example.entity
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+
+# Pagination
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params: count=countSql
+
+ip: ${SERVER_IP:localhost}
+
+# Alipay Configuration (Sandbox)
+# Replace these with your own credentials
+# Get sandbox credentials at: https://open.alipay.com/develop/sandbox/app
+alipay:
+  appId: ${ALIPAY_APP_ID:your_alipay_app_id}
+  appPrivateKey: ${ALIPAY_PRIVATE_KEY:your_alipay_private_key}
+  alipayPublicKey: ${ALIPAY_PUBLIC_KEY:your_alipay_public_key}
+  notifyUrl: ${ALIPAY_NOTIFY_URL:http://your-domain.com/alipay/notify}
